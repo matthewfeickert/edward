@@ -72,7 +72,8 @@ class RandomVariable(object):
   ```
   """
   def __init__(self, *args, **kwargs):
-    """
+    """Create a new random variable.
+
     Args:
       sample_shape: tf.TensorShape, optional.
         Shape of samples to draw from the random variable.
@@ -82,8 +83,6 @@ class RandomVariable(object):
       collections: list, optional.
         Optional list of graph collections (lists). The random variable is
         added to these collections. Defaults to `[ed.random_variables()]`.
-      *args, **kwargs:
-        Passed into parent `__init__`.
     """
     # pop and store RandomVariable-specific parameters in _kwargs
     sample_shape = kwargs.pop('sample_shape', ())
